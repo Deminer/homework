@@ -27,11 +27,12 @@ import requests
 
 # Заменить URL на адрес другого API
 # https://http.cat/КОД
-
-answer = requests.get("https://official-joke-api.appspot.com/random_joke")
+a = input()
+print(a)
+answer = requests.get("https://api.agify.io/?name=" + a)
 
 # Узнать названия полей
 json = answer.json()
 
 # Изменить вывод под названия полей
-print(json)
+print(json["age"])
